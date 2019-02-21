@@ -1,0 +1,130 @@
+/* Red borders on visible elements - handy for debugging */
+/** { border: 1px solid red; }*/
+
+<link rel="stylesheet" type="text/css" media="only screen and (max-device-width: 480px)" href="mobile-device.css" />
+
+:root {
+    --bg-color: #223030;
+    --text-color: #dddddd;
+    --bg-image: url("assets/bg.jpg");
+    --SHORTCUT_TIMEOUT: 1.5s;
+}
+body {
+    padding: auto;
+    margin: auto;
+
+    background: var(--bg-image);
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    
+    font-family: 'Raleway', sans-serif;
+    font-size: 22px;
+
+    user-select: none;
+    animation: fadein 1s;
+}
+
+#logo {
+    padding-top: auto;
+    text-align: auto;
+}
+#logo h1 {
+    font-weight: 200;
+    font-size: 4rem;
+    margin-bottom: auto;
+}
+#logo h2 {
+    font-weight: 200;
+    font-size: 2rem;
+    margin-top: auto;
+    opacity: 0.5;
+}
+
+#content {
+    text-align: center;
+}
+
+.group {
+    display: inline-block;
+    vertical-align: top;
+    text-align: left;
+    width: 20%;
+    padding: 1% 3%;
+}
+.group h1 {
+    font-weight: 400;
+    font-size: 2rem;
+    margin-bottom: auto;
+    border-bottom: 2px solid var(--text-color);
+}
+.group p {
+    margin-bottom: auto;
+    padding: auto; 
+}
+.group p + p {
+    margin: auto;
+}
+
+.shortcut {
+    float: right;
+    opacity: 0;
+    animation: pulse var(--SHORTCUT_TIMEOUT);
+}
+
+a, a:hover {
+    transition: all 0.4s ease;
+}
+a {
+    padding: 0.3rem 0; 
+    color: var(--text-color);
+    text-decoration: none;
+
+    opacity: 0.5;
+    padding-left: 0;
+}
+.group a:hover {
+    opacity: 1;
+    padding-left: 0.5rem;
+}
+#credits a:hover {
+    opacity: 1;
+}
+
+@keyframes fadein {
+    from { opacity: 0; }
+    to   { opacity: 1; }
+}
+@keyframes pulse {
+    0% { opacity: 0; }
+    20% { opacity: 0.3; }
+    80% { opacity: 0.3; }
+    100%   { opacity: 0; }
+}
+
+
+div.form
+{
+    display: block;
+    text-align: center;
+}
+form {
+                width:500px;
+                margin:50px auto;
+}
+.search {
+                padding:8px 15px;
+                background:rgba(50, 50, 50, 0.2);
+                border:0px solid #dbdbdb;
+}
+.button {
+                position:relative;
+                padding:auto;
+                left:auto;
+                border:2px solid #207cca;
+                background-color:#207cca;
+                color:#fafafa;
+}
+.button:hover  {
+                background-color:#fafafa;
+                color:#207cca;
+}

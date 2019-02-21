@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1/>
+    <!--Title of page-->
+    <title>Startpage</title>
+
+    <!--Startpage icon-->
+    <link rel="shortcut icon" type="image/png" href="assets/favicon.png">
+    
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway:200,400">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<div class="container">
+<div class="clock">
+<div class="clocktext">
+<script type="text/javascript">
+function startTime()
+{
+var today=new Date();
+var h=today.getHours();
+var m=today.getMinutes();
+var s=today.getSeconds();
+// add a zero in front of numbers<10
+m=checkTime(m);
+s=checkTime(s);
+document.getElementById('txt').innerHTML=h+":"+m+":"+s;
+t=setTimeout('startTime()',500);
+}
+function checkTime(i)
+{
+if (i<10)
+{
+i="0" + i;
+}
+return i;
+}
+</script>
+<body onload="startTime()">
+<div id="txt"></div>
+</div></div>
+
+	<div id="logo">
+		<h1 id="welcome-string"></h1>
+		<h2>
+		<script language="JavaScript">
+var date = new Date();
+var d  = date.getDate();
+var day = (d < 10) ? '0' + d : d;
+var m = date.getMonth() + 1;
+var month = (m < 10) ? '0' + m : m;
+var yy = date.getYear();
+var year = (yy < 1000) ? yy + 1900 : yy;
+
+document.write(day + "/" + month + "/" + year);
+</script> 
+		</h2>
+	</div>
+<div class="form">
+<div class="row form-container">
+	<div class="search">
+          <form action="https://www.google.com/search" target="_blank">
+            <input
+              name="q"
+              id="google-search"
+              type="text"
+              placeholder="Search Google.."
+            />
+			</div>
+            <button class="button" type="submit">Submit</button>
+          </form>
+        </div>
+		</div>
+		
+	<div id="content">
+		<!--Filled script.js. Edit `MASTER_MAP` inside the script-->
+	</div>
+	<script type="text/javascript" src="script.js"></script>
+</div>
+</body>
+</html>
